@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.top-image {
+    height: 300px;
+    width: 100%;
+    /*background-image: url("/dolomites-view-italy.jpg");*/
+    background: linear-gradient(to bottom, transparent, 80%, white), url("/dolomites-view-italy.jpg");
+    background-image: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 45%;
+}
+
+
+/*    RIGHT DIV    */
+.right-div {
+    width: 95%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 0px;
+    margin: 0 auto 50px auto;
+}
+
+.title-hour-div {
+    height: 150px;
+    width: 100%;
+    display: flex;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 80px;
+}
+
+
+.hour {
+    margin-top: 10px;
+    height: 140px;
+    width: 120px;
+    margin-left: auto;
+    background-color: black;
+    margin-right: 2px;
+    border-radius: 10px;
+    color: white;
+    font-size: 60px;
+    letter-spacing: -3px;
+    font-weight: 700;
+    padding-left: 25px;
+    padding-top: 25px;
+    position: relative;
+    
+
+}
+
+.minute {
+    margin-top: 10px;
+    height: 140px;
+    width: 120px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 60px;
+    letter-spacing: -3px;
+    font-weight: 700;
+    padding-left: 25px;
+    padding-top: 25px;
+    position: relative;
+    
+}
+
+.line-div {
+    width: 120px;
+    height: 2px;
+    background-color: white;
+    opacity: 0.3;
+    position: absolute;
+    top: 70px;
+    left: -0px;
+    z-index: 999;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 00;
+}
+
+.today {
+    display: flex;
+    justify-content: center;
+    float: right;
+    text-align: center;
+}
+
+.week-button {
+    cursor: pointer;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+.day {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.day-name {
+    height: 10px;
+}
+
+.schedule {
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 4px;
+}
+
+.mon {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.weekend {
+    background-color: rgb(251, 251, 250);
+}
+
+.day-num-div {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    
+}
+
+.day-num {
+    font-size: 14px;
+    margin: 0;
+}
+
+/*
+.tasks-div {
+
+}
+*/
+
+@keyframes transition {
+    from {background-color: inherit;}
+    to {background-color: rgb(198, 198, 197);}
+}
+
+.task {
+    min-height: 50px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 4px;
+    box-shadow: 0.3px 0.3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.true {
+    animation-name: transition;
+    animation-duration: 1s;
+    background-color: rgb(198, 198, 197);
+}
+
+.task-name {
+    flex: 1;
+    width: 100%;
+    padding: 1px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-name-title {
+    font-size: 14px;
+}
+
+.task-name-time {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.task-description {
+    flex: 1;
+    width: 100%;
+    padding: 1px 5px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.task-button {
+    min-height: 50px;
+    width: 100%;
+    margin-top: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.task-button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0.3px 0.3px rgba(0, 0, 0, 0.2);
+}
+
+/*  bottom div */
+.bottom-div {
+    width: 95%;
+    min-height: 300px;
+    padding: 0;
+    margin: 0px auto 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1px auto;
+    column-gap: 20px;
+    grid-gap: 30px;
+}
+
+.progressTitle {
+    font-size: 24px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.hr-line {
+    background-color: rgba(148, 148, 148, 0.6);
+    width: 100%;
+}
+
+.bottom-div-left {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 50px);
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.bottom-div-middle {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 50px);
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.bottom-div-right {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 50px);
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.cards {
+    border: 1px solid rgba(153, 149, 149, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(131, 131, 131, 0.2), 0 3px 10px 0 rgba(142, 142, 142, 0.19);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    justify-content: space-between;
+}
+
+.cards-title {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.cards-progress {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.cards-progressBar {
+    height: 30px;
+    text-align: center;
+    padding-top: 2px;
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0.5) 10%, white 10%);
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 16px;
+    border: 1px solid rgba(147, 147, 147, 0.5);
+}
+
+

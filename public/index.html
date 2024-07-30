@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organiser</title>
+    <link href="styles.css" rel="stylesheet"> 
+    
+</head>
+<body>
+    <div class="top-image"></div>
+
+    <div class="right-div">
+        <div class="title-hour-div">
+            <p class="title">Study planner</p>
+            <div class="hour"><span id="hour" class="hour-span"></span><div class="line-div"></div></div>
+            <div class="minute"><span id="minute" class="minute-span"></span><div class="line-div"></div></div>
+        </div>
+        <hr>
+        <p class="date">
+            <span  id="date" class="date-span"></span>
+            <span class="today">
+                <a class="week-button" id="prev-week">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path fill="currentColor" d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+                </a>
+                    Today
+                <a class="week-button" id="next-week">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path  fill="currentColor" d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                </a>
+            </span>
+        </p>
+        <div class="calendar">
+
+            <div id="monday" class="day">
+                <p class="day-name" id="mon-name">Mon</p>
+                <div id="monday-div" class="schedule monday mon">
+                    <div class="day-num-div"><span id="mon-num" class="day-num"></span></div>
+                    <div class="tasks-div" id="monday-tasks-div"></div>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="day-name" id="tue-name">Tue</p>
+                <div id="tuesday-div" class="schedule tuesday">
+                    <div class="day-num-div"><span id="tue-num" class="day-num"></span></div>
+                    <div class="tasks-div" id="tuesday-tasks-div"></div>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="day-name" id="wed-name">Wed</p>
+                <div id="wednesday-div" class="schedule wednesday">
+                    <div class="day-num-div"><span id="wed-num" class="day-num"></span></div>
+                    <div class="tasks-div" id="wednesday-tasks-div"></div>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="day-name" id="thu-name">Thu</p>
+                <div id="thursday-div" class="schedule thursday">
+                    <div class="day-num-div"><span id="thu-num" class="day-num"></span></div>
+                    <div class="tasks-div" id="thursday-tasks-div"></div>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="day-name" id="fri-name">Fri</p>
+                <div id="friday-div" class="schedule friday">
+                    <div class="day-num-div"><span id="fri-num" class="day-num"></span></div>
+                    <div class="tasks-div" id="friday-tasks-div"></div>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="day-name" id="sat-name">Sat</p>
+                <div id="saturday-div" class="schedule saturday weekend">
+                    <div class="day-num-div"><span id="sat-num" class="day-num"></span></div>
+                    <div class="tasks-div" id="saturday-tasks-div"></div>
+                </div>
+            </div>
+
+            <div class="day">
+                <p class="day-name" id="sun-name">Sun</p>
+                <div id="sunday-div" class="schedule sunday weekend">
+                    <div class="day-num-div"><span id="sun-num" class="day-num"></span></div>
+                    <div class="tasks-div" id="sunday-tasks-div"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-div" id="bottom-div">
+        <p class="progressTitle">Study progress</p>
+        <p class="progressTitle">Programming progress</p>
+        <p class="progressTitle">Projects</p>
+
+
+        <div class="hr-line"></div>
+        <div class="hr-line"></div>
+        <div class="hr-line"></div>
+
+        <div class="bottom-div-left" id="bottom-div-left"></div>
+        <div class="bottom-div-middle" id="bottom-div-middle"></div>
+        <div class="bottom-div-right" id="bottom-div-right"></div>
+
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="dateElManagment.js"></script>
+</body>
+</html>
